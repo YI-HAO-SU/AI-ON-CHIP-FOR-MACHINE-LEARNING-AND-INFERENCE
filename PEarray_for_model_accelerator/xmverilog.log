@@ -1,0 +1,108 @@
+xmverilog(64): 22.03-s003: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
+TOOL:	xmverilog	22.03-s003: Started on Apr 30, 2023 at 21:01:23 CST
+ncverilog
+	top_tb.sv
+	-define
+	V+FSDB
+	+access+r
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+Recompiling... reason: file './top_tb.sv' is newer than expected.
+	expected: Sun Apr 30 20:56:31 2023
+	actual:   Sun Apr 30 21:01:20 2023
+file: top_tb.sv
+module Adder(
+           |
+xmvlog: *W,RECOME (PE.v,953|11): recompiling design unit worklib.Adder:v.
+	First compiled from line 160 of MAC.v.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                 10      10
+		Registers:              125     125
+		Scalar wires:            21       -
+		Vectored wires:          41       -
+		Always blocks:           20      20
+		Initial blocks:          19      19
+		Cont. assignments:       20      27
+		Pseudo assignments:       7       7
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.Spad_8bits:v
+Loading snapshot worklib.Spad_8bits:v .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_xcelium171.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_22.03.003/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_P-2019.06, Linux x86_64/64bit, 05/26/2019
+(C) 1996 - 2019 by Synopsys, Inc.
+***********************************************************************
+*  WARNING -                                                          *
+*  The simulator version is newer than the FSDB Writer version which  *
+*  may cause abnormal behavior, please contact Cadence support for    *
+*  assistance.                                                        *
+***********************************************************************
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'top.fsdb'
+*Verdi* : Begin traversing the scope (top_tb.pe), layer (0).
+*Verdi* : Enable +struct and +mda dumping.
+*Verdi* : End of traversing.
+ifmap:  
+ifmap 0
+channel 0:    1    2    1    2
+channel 1:   -2   -1    1    2
+channel 2:    3   -1   -1    4
+ifmap 1
+channel 0:    4    2    5   -6
+channel 1:    5   -4    3    2
+channel 2:    6   -6    1    3
+
+weight:  
+filter 0
+channel 0:    1   -1    2
+channel 1:   -2    4   -3
+channel 2:    3    3   -4
+filter 1
+channel 0:    2    1   -4
+channel 1:   -2    3    7
+channel 2:    1    2    1
+
+ipsum:  
+  -6   -5   11
+   1    7   10
+  20  -22
+
+  
+result=   2, answer=   2, Correct!
+result= -22, answer= -22, Correct!
+result= -49, answer=  19, Wrong!
+result= 371, answer=  18, Wrong!
+result=  29, answer= -20, Wrong!
+result=   0, answer= -18, Wrong!
+result=-512, answer=   4, Wrong!
+result=   0, answer=  41, Wrong!
+
+
+
+
+        ****************************               
+        **                        **       |__||  
+        **  OOPS!!                **      / X,X  | 
+        **                        **    /_____   | 
+        **  Simulation Failed!!   **   /^ ^ ^ \  |
+        **                        **  |^ ^ ^ ^ |w| 
+        ****************************   \m___m__|_|
+         Totally has           6 errors                     
+
+
+total cycle =                  214
+
+
+
+Simulation complete via $finish(1) at time 1720 NS + 0
+./top_tb.sv:350         $finish;
+xcelium> exit
+TOOL:	xmverilog	22.03-s003: Exiting on Apr 30, 2023 at 21:01:23 CST  (total: 00:00:00)

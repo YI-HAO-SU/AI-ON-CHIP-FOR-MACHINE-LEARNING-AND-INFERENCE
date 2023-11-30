@@ -1,0 +1,14 @@
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 0 23 1536 841
+wvResizeWindow -win $_nWave1 0 23 1536 841
+wvResizeWindow -win $_nWave1 0 23 1536 841
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 0 23 1536 841
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 0 23 1536 841
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 146 186 893 72
+wvResizeWindow -win $_nWave1 0 23 1536 841
+wvExit
